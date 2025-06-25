@@ -43,8 +43,8 @@ const switchPlayer = function () {
 btnRoll.addEventListener('click', function () {
   if (isGamePlaying) {
     const dice = Math.trunc(Math.random() * 6 + 1);
+    diceEl.src = `dice-${dice}.png`;
     if (dice !== 1) {
-      diceEl.src = `dice-${dice}.png`;
       currentScore += dice; // Add dice value to current score
       document.querySelector(`#current--${activePlayer}`).textContent =
         currentScore; // Update current score display for the active player
